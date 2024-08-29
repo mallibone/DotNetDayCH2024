@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DemoIII"
+             x:DataType="local:MainViewModel"
+             x:Class="DemoIII.MainPage">
+    <!-- <Grid>
+        <HybridWebView HybridRoot="heartBeat" x:Name="hybridWebView" />
+        <ActivityIndicator x:Name="ActivityIndicator" Grid.RowSpan="2"/>
+    </Grid> -->
+    <Grid RowDefinitions="Auto,*" ColumnDefinitions="*">
+        <Button Text="Send message to JavaScript" Clicked="OnSendMessageButtonClicked" />
+        <HybridWebView HybridRoot="simpleWebApp" RawMessageReceived="OnHybridWebViewRawMessageReceived" x:Name="hybridWebView" Grid.Row="1" />
+        <ActivityIndicator x:Name="ActivityIndicator" Grid.RowSpan="2" IsVisible="False"/>
+    </Grid>
+</ContentPage>
